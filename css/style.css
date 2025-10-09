@@ -127,8 +127,10 @@ main {
             margin-top: 20px;
             width: 450px;
             height: 350px;
+        }
 
-
+        a{
+            border-radius: 50px;
         }
     }
 }
@@ -186,4 +188,8 @@ button {
     font-size: 24px;
     line-height: 32px;
     font-weight: bold;
+}
+
+.disable {
+    color: var(--color-dark-grey);
 }
