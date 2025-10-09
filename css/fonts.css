@@ -1,0 +1,55 @@
+/* Fuentes */
+@font-face{
+    font-family: "Poppins";
+    src: url(../fonts/Poppins/Poppins-Bold.ttf) format("truetype");
+}
+@font-face{
+    font-family: "Roboto";
+    src: url(../fonts/Roboto/Roboto-Italic-VariableFont_wdth\,wght.ttf) format("truetype");
+}
+
+.title {
+    font-size: 64px;
+    line-height: 72px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-family: "Poppins";
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: "Poppins";
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+    font-family: "Poppins";
+
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: normal;
+    font-family: "Poppins";
+}
+
+.regularText * {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    font-family: "Roboto";
+}
+
+.smallText {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: normal;
+    font-family: "Roboto";
+}

@@ -1,0 +1,191 @@
+
+
+/* Principal */
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--color-white);
+    font-family: Arial, san-serif;
+}
+
+body {
+    background-color: var(--color-black);
+}
+
+/* Fuentes */
+.title {
+    font-size: 64px;
+    line-height: 72px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: normal;
+}
+
+.regularText * {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+}
+
+.smallText {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: normal;
+}
+
+/* Containers */
+.flexContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.flexContainerEnd {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.containerBorder {
+    border: 2px solid var(--color-dark-grey);
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 80vw;
+    
+    
+
+}
+
+/* Position */
+.centered {
+    text-align: center;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+ol, ul {
+    padding-left: 30px;
+
+    li {
+        padding-left: 10px;
+        margin-block: 5px;
+    }
+}
+
+/* Dimensions */
+.w600 {
+    width: 600px;
+}
+
+.gap150 {
+    gap: 150px;
+}
+
+.gap5 {
+    gap: 5px;
+}
+
+/* Colores */
+.bcRed{
+    background-color: var(--color-red);
+}
+
+.bcBlue{
+    background-color: var(--color-blue);
+}
+
+.cRed{
+    color: var(--color-red);
+}
+
+.cBlueA a:hover{
+    color: var(--color-blue);
+}
+
+.borderRed  {
+    border: 2px solid var(--color-red) !important; 
+}
+/* Decoration */
+.noDecorationAll * {
+    text-decoration: none;
+}
+
+.placeholder {
+    color: var(--color-light-grey);
+}
+
+/* Inputs */
+.inputGrey {
+    background-color: var(--color-light-grey);
+    border-radius: 10px;
+    padding-left: 5px;
+    border: 1px solid var(--color-dark-grey);
+    color: var(--color-black);
+
+}
+
+.multipleSelectGrey {
+    background-color: var(--color-light-grey);
+    border-radius: 10px;
+    border: 1px solid var(--color-dark-grey);
+    color: var(--color-black);
+    overflow-y: hidden;
+    
+    option {
+        color: var(--color-black);
+        padding: 3px;
+    }
+
+    option:checked {
+        background-color: var(--color-light-grey);
+        font-weight: bold;
+    }
+}
+
+/* Botones */
+button {
+    color: var(--color-black);
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid var(--color-dark-grey);
+    border-radius: 10px;
+    padding-inline: 10px;
+    padding-block: 5px;
+
+    * {
+        color: var(--color-black);
+    }
+
+}
