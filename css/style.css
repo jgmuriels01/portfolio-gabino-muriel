@@ -8,6 +8,7 @@
     --color-red: #EF4444;
     --color-light-grey: #9CA3AF;
     --color-dark-grey: #6B7280;
+
 }
 
 /* testing */
@@ -49,7 +50,7 @@ header {
         height: 80%;
     }
 
-    button{
+    button {
         background-color: var(--color-blue);
     }
 
@@ -129,7 +130,7 @@ main {
             height: 350px;
         }
 
-        a{
+        a {
             border-radius: 50px;
         }
     }
