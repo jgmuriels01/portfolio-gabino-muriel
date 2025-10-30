@@ -32,10 +32,17 @@ body {
 
 /* Header */
 header {
+    width: 100%;
+    background-color: color-mix(in srgb, var(--color-black), transparent 10%);
+    position: sticky;
+    top: 0px;
+}
+
+
+
+.header-container {
     width: 60vw;
     height: 100px;
-    position: sticky;
-    top: 20px;
     background-color: var(--color-black);
     border: 2px solid var(--color-light-grey);
     margin: 0 auto;
@@ -43,7 +50,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 50px;
 
     /* Img */
     #header-logo {
@@ -53,8 +60,11 @@ header {
     button {
         background-color: var(--color-blue);
     }
-
-
+}
+@media (max-width: 600px) {
+    .header-container {
+        width: 100vw;
+    }
 }
 
 /* Hero */
@@ -86,7 +96,7 @@ header {
 
 /* Main */
 main {
-    max-width: 60vw;
+    max-width: 53vw;
     margin-top: 50px;
     gap: 100px;
     display: grid;
