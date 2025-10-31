@@ -11,13 +11,17 @@
 
 }
 
-/* testing */
-* {
-    /* border: 2px solid red; */
+html {
     font-size: 16px;
     line-height: 24px;
+    
+}
+
+/* testing */
+* {
     font-weight: normal;
     font-family: "Roboto";
+    box-sizing: border-box;
 }
 
 /* body */
@@ -27,6 +31,7 @@ body {
     align-items: center;
     background-color: var(--color-black);
     color: var(--color-white);
+
 
 }
 
@@ -41,8 +46,8 @@ header {
 
 
 .header-container {
-    width: 60vw;
-    height: 100px;
+    width: 90vw;
+    height: clamp(80px, 8vw, 100px);
     background-color: var(--color-black);
     border: 2px solid var(--color-light-grey);
     margin: 0 auto;
@@ -54,18 +59,14 @@ header {
 
     /* Img */
     #header-logo {
-        height: 80%;
+        height: clamp(10px, 7vw, 80px);
     }
 
     button {
         background-color: var(--color-blue);
     }
 }
-@media (max-width: 600px) {
-    .header-container {
-        width: 100vw;
-    }
-}
+
 
 /* Hero */
 #hero {
@@ -76,19 +77,20 @@ header {
 
 
     #hero-logo {
-        width: 40%;
+        width: clamp(300px, 40%, 500px);
+        ;
     }
 
     h1 {
-        font-size: 64px;
-        line-height: 72px;
+        font-size: clamp(10px, 7vw, 70px);
+        line-height: clamp(5px, 5vw, 40px);
         font-weight: bold;
         margin-top: 15px;
     }
 
     h2 {
-        font-size: 32px;
-        line-height: 40px;
+        font-size: clamp(5px, 4vw, 40px);
+        line-height: clamp(5px, 5vw, 40px);
         font-weight: bold;
         margin-top: -20px;
     }
@@ -96,23 +98,22 @@ header {
 
 /* Main */
 main {
-    max-width: 53vw;
+    max-width: 90vw;
     margin-top: 50px;
-    gap: 100px;
+    gap: 5%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
 
     /* Proyects */
     .proyect-card {
-        width: 500px;
-        height: 500px;
+        width: clamp(400px, 50vw, 450px);
+        height: clamp(350px, 50vw, 400px);
         border: 2px solid var(--color-light-grey);
         border-radius: 50px;
         display: flex;
         flex-direction: column;
         align-items: center;
-
 
         .proyect-header {
             width: 95%;
@@ -122,22 +123,27 @@ main {
             margin-top: 15px;
 
             svg {
-                margin-inline: 15px;
+                margin-inline: clamp(10px, 1vw, 60px);
+                width: clamp(50px, 5vw, 55px);
+
             }
+
         }
 
         .proyect-title {
-            font-size: 24px;
-            line-height: 32px;
+            font-size: clamp(25px, 3vw, 25px);
+            line-height: 28px;
             font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .proyect-img {
             border: 2px solid var(--color-light-grey);
             border-radius: 50px;
-            margin-top: 20px;
-            width: 450px;
-            height: 350px;
+            width: clamp(370px, 45vw, 400px);
+            height: clamp(240px, 35vw, 280px);
         }
 
         a {
@@ -146,10 +152,36 @@ main {
     }
 }
 
+a:not(.disabled):hover svg path {
+    fill: #3B82F6;
+    
+}
+a:not(.disabled):hover{
+    transform: scale(1.1);
+    transform-origin: center;
+    transition: transform 0.2s ease, fill 0.2s ease;
+}
+a.disabled svg path {
+    fill: var(--color-light-grey);
+}
+
+@media (max-width:1911px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:1193px) {
+    main {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2%;
+        margin-bottom: 50px;
+    }
+}
+
 /* footer */
 footer {
-    width: 60vw;
-    position: sticky;
+    width: 90vw;
     background-color: var(--color-black);
     border: 2px solid var(--color-light-grey);
     border-radius: 50px;
@@ -160,17 +192,23 @@ footer {
     margin-top: 100px;
 
     #footer-hero {
-        width: 40%;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         #footer-logo {
-            width: 40%;
+            height: clamp(20px, 8vw, 80px);
+            margin-top: 10px;
+        }
+
+        h1 {
+            font-size: clamp(25px, 4vw, 50px);
         }
     }
 
     #footer-info {
+        font-size: clamp(12px, 2vw, 25px);
+
         #footer-email {
             margin-bottom: 30px;
         }
@@ -184,23 +222,49 @@ footer {
 
     #footer-icons {
         display: flex;
+        flex-direction: row;
+        gap: clamp(12px, 4vw, 80px);
+
+        svg {
+            width: clamp(50px, 4vw, 60px);
+        }
+    }
+}
+
+@media (max-width:842px) {
+    footer {
         flex-direction: column;
-        gap: 20px;
+
+        #footer-hero {
+            margin-top: 0px;
+            width: 90%;
+        }
+
+        #footer-info {
+            margin-top: -20px;
+        }
+
+        #footer-icons {
+            margin-top: 10px;
+            flex-direction: row;
+            gap: 40px;
+        }
     }
 }
 
 /* Botones */
 button {
-    width: 150px;
-    height: 70px;
+    width: clamp(100px, 10vw, 150px);
+    height: clamp(50px, 5vw, 70px);
     border-radius: 100px;
     margin-inline: 15px;
-    border: 2px solid var(--color-light-grey);
-    font-size: 24px;
+    border: 2px solid var(--color-blue);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
     line-height: 32px;
     font-weight: bold;
 }
-
-.disable {
-    color: var(--color-dark-grey);
+button:hover{
+    transform-origin: center;
+    transition: transform 0.2s ease, fill 0.2s ease;
+    border: 2px solid var(--color-light-grey);
 }
