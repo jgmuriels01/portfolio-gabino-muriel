@@ -14,7 +14,7 @@
 html {
     font-size: 16px;
     line-height: 24px;
-    
+
 }
 
 /* testing */
@@ -107,8 +107,8 @@ main {
 
     /* Proyects */
     .proyect-card {
-        width: clamp(400px, 50vw, 450px);
-        height: clamp(350px, 50vw, 400px);
+        width: clamp(250px, 50vw, 450px);
+        height: clamp(250px, 44vw, 400px);
         border: 2px solid var(--color-light-grey);
         border-radius: 50px;
         display: flex;
@@ -124,14 +124,14 @@ main {
 
             svg {
                 margin-inline: clamp(10px, 1vw, 60px);
-                width: clamp(50px, 5vw, 55px);
+                width: clamp(40px, 5vw, 55px);
 
             }
 
         }
 
         .proyect-title {
-            font-size: clamp(25px, 3vw, 25px);
+            font-size: clamp(12px, 3vw, 25px);
             line-height: 28px;
             font-weight: bold;
             white-space: nowrap;
@@ -142,8 +142,8 @@ main {
         .proyect-img {
             border: 2px solid var(--color-light-grey);
             border-radius: 50px;
-            width: clamp(370px, 45vw, 400px);
-            height: clamp(240px, 35vw, 280px);
+            width: clamp(220px, 45vw, 400px);
+            height: clamp(140px, 27vw, 280px);
         }
 
         a {
@@ -151,16 +151,57 @@ main {
         }
     }
 }
+@media (max-width:1041px) {
+    main {
+        .proyect-card {
+            width: clamp(250px, 50vw, 450px);
+            height: clamp(250px, 44vw, 400px);
+
+            .proyect-img {
+                width: clamp(220px, 45vw, 400px);
+                height: clamp(140px, 30vw, 280px);
+            }
+        }
+    }
+}
+@media (max-width:800px) {
+    main {
+        .proyect-card {
+            width: clamp(250px, 50vw, 450px);
+            height: clamp(250px, 47vw, 400px);
+
+            .proyect-img {
+                width: clamp(220px, 45vw, 400px);
+                height: clamp(140px, 27vw, 280px);
+            }
+        }
+    }
+}
+@media (max-width:529px) {
+    main {
+        .proyect-card {
+            width: clamp(250px, 50vw, 450px);
+            height: clamp(250px, 44vw, 400px);
+
+            .proyect-img {
+                width: clamp(220px, 45vw, 400px);
+                height: clamp(140px, 27vw, 280px);
+            }
+        }
+    }
+}
 
 a:not(.disabled):hover svg path {
     fill: #3B82F6;
-    
+
 }
-a:not(.disabled):hover{
+
+a:not(.disabled):hover {
     transform: scale(1.1);
     transform-origin: center;
     transition: transform 0.2s ease, fill 0.2s ease;
 }
+
 a.disabled svg path {
     fill: var(--color-light-grey);
 }
@@ -254,16 +295,17 @@ footer {
 
 /* Botones */
 button {
-    width: clamp(100px, 10vw, 150px);
+    width: clamp(90px, 10vw, 150px);
     height: clamp(50px, 5vw, 70px);
     border-radius: 100px;
     margin-inline: 15px;
     border: 2px solid var(--color-blue);
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
     line-height: 32px;
     font-weight: bold;
 }
-button:hover{
+
+button:hover {
     transform-origin: center;
     transition: transform 0.2s ease, fill 0.2s ease;
     border: 2px solid var(--color-light-grey);
